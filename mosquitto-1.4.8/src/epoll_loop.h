@@ -52,7 +52,7 @@ void epoll_do_disconnect(struct mosquitto_db *db, struct mosquitto *context);
 int create_epoll(struct mosquitto_db *db);
 void destory_epoll(struct mosquitto_db *db);
 
-int invalid_event(int state);
+int invalid_event(unsigned int state);
 int register_event(struct mosquitto_db * db,int fd,int state);
 int unregister_event(struct mosquitto_db * db,int fd);
 int modify_event(struct mosquitto_db * db,int fd,int state);
