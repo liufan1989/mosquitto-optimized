@@ -62,7 +62,7 @@ void destory_epoll(struct mosquitto_db * db)
     }
 }
 
-int invalid_event(int state)
+int invalid_event(unsigned int state)
 {
     if(state > EPOLLET || state < EPOLLIN)
         return -1;
